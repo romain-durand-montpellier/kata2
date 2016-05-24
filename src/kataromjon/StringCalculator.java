@@ -8,7 +8,7 @@ public class StringCalculator {
 		
 		String customDelimiter = ",";
 		if (values.startsWith("//") && values.length() >=2){
-			//customDelimiter = new String( values.charAt(2));
+			customDelimiter = String.valueOf( values.charAt(2)); 
 			values = values.substring(3, values.length()-3);
 		}
 		// if values is empty return 0
