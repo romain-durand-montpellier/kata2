@@ -1,4 +1,4 @@
-package kata2;
+package kataromjon;
 
 import static org.junit.Assert.*;
 
@@ -21,6 +21,9 @@ public class StringCalculatorTest {
 	
 	private static final String CARRIER_PARAM = "1\n2,3";
 	private static final int CARRIER_PARAM_RESULT = 6;
+	
+//	private static final String CUSTOM_PARAM = "//;\n1;2";
+//	private static final int CUSTOM_PARAM_RESULT = 3;	
 	
 	
 	private StringCalculator sc ;
