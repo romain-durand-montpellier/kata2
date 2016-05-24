@@ -18,16 +18,13 @@ public class StringCalculator {
 			else
 			{
 				String[] intValues = values.split(",");
-				
 				for (String i : intValues) {
 					somme += Integer.parseInt(i);
 				}
 			}
-
 			
 		}
+		
 		return somme;
-
 	}
-
 }

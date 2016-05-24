@@ -6,14 +6,17 @@ import org.junit.Test;
 
 public class StringCalculatorTest {
 
+	
+	StringCalculator sc ;
+	public StringCalculatorTest() {
+		// Given
+		 sc = new StringCalculator();
+	}
+	
 	@Test
 	public void StringCalculatorShouldReturnZeroWithEmptyStringParam() {
-
-		// Given
-		StringCalculator s = new StringCalculator();
-
 		// WHEN
-		int somme = s.add("");
+		int somme = sc.add("");
 
 		// THEN
 		assertEquals(0, somme);
@@ -21,29 +24,20 @@ public class StringCalculatorTest {
 
 	@Test
 	public void StringCalculatorShouldReturnTheParamIfOnlyOneParam() {
-
-		// Given
-		StringCalculator s = new StringCalculator();
-
 		// WHEN
-		int somme = s.add("8");
+		int somme = sc.add("8");
 
 		// THEN
 		assertEquals(8, somme);
 	}
-	
+
 	@Test
-	public void StringCalculatorShouldReturnSumWithStringParamAsIntegerSeparateWithComma()
-	{
-		// Given
-				StringCalculator s = new StringCalculator();
+	public void StringCalculatorShouldReturnSumWithStringParamAsIntegerSeparateWithComma() {
+		// WHEN
+		int somme = sc.add("2,1");
 
-				// WHEN
-				int somme = s.add("2,1");
-
-				// THEN
-				assertEquals(3, somme);
-		
+		// THEN
+		assertEquals(3, somme);
 	}
 
 }
