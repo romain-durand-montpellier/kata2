@@ -31,5 +31,19 @@ public class StringCalculatorTest {
 		// THEN
 		assertEquals(8, somme);
 	}
+	
+	@Test
+	public void StringCalculatorShouldReturnSumWithStringParamAsIntegerSeparateWithComma()
+	{
+		// Given
+				StringCalculator s = new StringCalculator();
+
+				// WHEN
+				int somme = s.add("2,1");
+
+				// THEN
+				assertEquals(3, somme);
+		
+	}
 
 }
