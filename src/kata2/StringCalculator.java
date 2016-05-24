@@ -8,6 +8,10 @@ public class StringCalculator {
 		if (values == "") {
 			somme = 0;
 		}
+		//Simply return the param since there's nothing to add
+		else {
+			somme = Integer.parseInt(values);
+		}
 		return somme;
 
 	}

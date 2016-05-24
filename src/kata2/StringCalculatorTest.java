@@ -19,4 +19,17 @@ public class StringCalculatorTest {
 		assertEquals(0, somme);
 	}
 
+	@Test
+	public void StringCalculatorShouldReturnTheParamIfOnlyOneParam() {
+
+		// Given
+		StringCalculator s = new StringCalculator();
+
+		// WHEN
+		int somme = s.add("8");
+
+		// THEN
+		assertEquals(8, somme);
+	}
+
 }
