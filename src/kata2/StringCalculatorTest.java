@@ -19,6 +19,10 @@ public class StringCalculatorTest {
 	private static final String INFINITE_PARAM = "1,2,3,4";
 	private static final int INFINITE_PARAM_RESULT = 10;
 	
+	private static final String CARRIER_PARAM = "1\n2,3";
+	private static final int CARRIER_PARAM_RESULT = 6;
+	
+	
 	private StringCalculator sc ;
 	public StringCalculatorTest() {
 		// Given
@@ -59,6 +63,15 @@ public class StringCalculatorTest {
 
 		// THEN
 		assertEquals(INFINITE_PARAM_RESULT, somme);
+	}	
+	
+	@Test
+	public void StringCalculatorShouldReturnSumWithStringParamAsInfiniteIntegerSeparateWithCommaAndCarrier() {
+		// WHEN
+		int somme = sc.add(CARRIER_PARAM);
+
+		// THEN
+		assertEquals(CARRIER_PARAM_RESULT, somme);
 	}	
 
 }

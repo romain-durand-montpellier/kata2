@@ -8,10 +8,19 @@ public class StringCalculator {
 
 		// if values is empty return 0
 		if (values != "") {
-			// else return sum of string parsed to integer 
-			String[] intValues = values.split(",");
-			for (String i : intValues) {
-				somme += Integer.parseInt(i);
+			// else return sum of string parsed to integer
+			String[] splitValues = values.split(",");
+			for (String i : splitValues) {
+
+				// if we have a return carrier...
+				if (i.contains("\n")) {
+					String[] splitCarriers = i.split("\n");
+					for (String c : splitCarriers) {
+						somme += Integer.parseInt(c);
+					}
+				} else {
+					somme += Integer.parseInt(i);
+				}
 			}
 		}
 		return somme;
