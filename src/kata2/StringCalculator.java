@@ -8,23 +8,12 @@ public class StringCalculator {
 
 		// if values is empty return 0
 		if (values != "") {
-
-			// if values have only one integer in values , simply return the param since there's nothing to add
-			if ( !values.contains(",") )
-			{
-				somme = Integer.parseInt(values);				
+			// else return sum of string parsed to integer 
+			String[] intValues = values.split(",");
+			for (String i : intValues) {
+				somme += Integer.parseInt(i);
 			}
-			// if more than one...
-			else
-			{
-				String[] intValues = values.split(",");
-				for (String i : intValues) {
-					somme += Integer.parseInt(i);
-				}
-			}
-			
 		}
-		
 		return somme;
 	}
 }
