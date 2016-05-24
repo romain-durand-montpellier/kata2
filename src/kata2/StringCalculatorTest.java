@@ -7,8 +7,16 @@ import org.junit.Test;
 public class StringCalculatorTest {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void StringCalculatorShouldReturnZeroWithEmptyStringParam() {
+
+		// Given
+		StringCalculator s = new StringCalculator();
+
+		// WHEN
+		int somme = s.add("");
+
+		// THEN
+		assertEquals(0, somme);
 	}
 
 }
